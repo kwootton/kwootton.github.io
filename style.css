@@ -12,7 +12,6 @@ body {
 a {
   color: unset;
   text-decoration: none;
-  font-weight: bold;
 }
 
 #sidebar {
@@ -27,6 +26,10 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+#sidebar a {
+  font-weight: bold;
 }
 
 #navigation {
@@ -88,4 +91,28 @@ a {
   max-width: 640px;
   min-height: 100vh;
   padding: 50px 100px;
+}
+
+.panel .bold {
+  font-weight: bold;
+}
+
+.panel .italic {
+  font-style: italic;
+}
+
+.panel .image {
+  padding: 50px 0;
+  width: 100%;
+  text-align: center;
+
+}
+
+.panel .image .caption {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.2em; 
+  margin: 20px;
 }

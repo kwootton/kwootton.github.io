@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&display=swap");
-
 html {
   scroll-behavior: smooth;
   font-family: "Lusitana", serif;
+  font-size: 1.25rem;
 }
 
 body {
@@ -19,6 +18,7 @@ a {
   background: #77b1be;
   color: black; /* font-colour */
   position: fixed;
+  padding: 0 20px;
   top: 0px;
   right: 0px;
   width: 20%;
@@ -84,8 +84,56 @@ a {
   width: 85%;
 }
 
+#content #menu-button {
+  visibility: hidden;
+}
+
 .panel {
   max-width: 640px;
   min-height: 100vh;
   padding: 50px 100px;
+}
+
+@media only screen and (max-width: 1000px) {
+  #content {
+    width: 100%;
+  }
+
+  #content #menu-button {
+    visibility: visible;
+    font-size: 2em;
+    margin: 12px 20px;
+    padding: 6px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: center;
+    opacity: 0.7;
+  }
+
+  .panel {
+    padding: 20px 30px;
+  }
+
+  #sidebar {
+    position: unset;
+    height: unset;
+    padding: unset;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  #sidebar #navigation {
+    margin: 64px 0;
+  }
+
+  #sidebar #contact {
+    margin: 64px 0;
+    margin-top: 0;
+  }
 }

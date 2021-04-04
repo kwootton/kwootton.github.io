@@ -1,8 +1,6 @@
 #!/bin/bash
-PORT=8000
 
 function onExit {
-  rm .reload
   pkill -P $$
 }
 
@@ -10,14 +8,12 @@ function onExit {
 function runServer {
   trap onExit EXIT 
 
-  python -m SimpleHTTPServer $PORT 2>&1 | xargs -L 1 echo "Server: " &
-
-  socat tcp-listen:8001,fork exec:"inotifywait -e modify -e create -e delete ./"
+  sudo python -m SimpleHTTPServer 80 2>&1 &
 }
 
 runServer
 
-xdg-open http://localhost:$PORT
+xdg-open "http://localhost"
 
 for job in `jobs -p`; do
   wait $job

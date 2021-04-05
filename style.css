@@ -10,7 +10,7 @@ body {
 
 a {
   color: unset;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 #sidebar {
@@ -30,6 +30,7 @@ a {
 
 #sidebar a {
   font-weight: bold;
+  text-decoration: none;
 }
 
 #navigation {
